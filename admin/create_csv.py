@@ -24,7 +24,7 @@ def output_csv(output_path, table_name, rows, header):
     header : list of str
         DBのカーソル
     """
-    with open(output_path + "MPDSYS." + table_name + ".csv", "w") as csv_file:
+    with open(output_path + "BACKUP." + table_name + ".csv", "w") as csv_file:
         csv_writer = csv.writer(csv_file, lineterminator='\n', quotechar='"', quoting=csv.QUOTE_ALL)# 改行コードと囲み文字を指定
         csv_writer.writerow(header) # ヘッダーを追加
         csv_writer.writerows(rows) 

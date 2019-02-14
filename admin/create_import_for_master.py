@@ -23,10 +23,12 @@ import create_csv
 CHAR_CODE='UTF-8'
 # 読み込むディレクトリ
 INPORT_RELEASE_PATH = './data/'
+# バックアップ先ディレクトリ
+BACKUP_RELEASE_PATH = './backup/'
 # 出力するディレクトリ
 INSERT_SQL_PATH = "./output/"
 # 例外マスタ名
-IGNORE_MASTER_LIST = ["ITEM", "ERROR_CODE"]
+IGNORE_MASTER_LIST = ["ITEM", "BACKUP"]
 
 # デバッグ用
 DEBUG = False
@@ -129,7 +131,7 @@ def main():
     for item in filelist:
         conn = dbcon.connect_oracle()
         result = dbcon.send_select(conn, item)
-        create_csv.output_csv(INPORT_RELEASE_PATH, item, result[0], result[1])
+        create_csv.output_csv(BACKUP_RELEASE_PATH, item, result[0], result[1])
         conn.close()
 
     # csvからIMSERT文を生成

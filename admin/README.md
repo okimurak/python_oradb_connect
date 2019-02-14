@@ -2,7 +2,7 @@ OracleDBデータリリースツール
 ====
 ## Overview
 OracleDBにリリースするためのSQLを生成するツール
-DBからバックアップを取得して、マスタをリリースするSQLを作成します。
+DBからバックアップを取得して、マスタを上書き更新するSQLを作成します。
 
 ## Description
 ・フォルダ構成
@@ -15,6 +15,7 @@ DBからバックアップを取得して、マスタをリリースするSQLを
   ├ README.md                        … 本ドキュメント
   ├ setting.ini                      … DB接続設定ファイル
   ├ /output                          … 出力したSQLファイルを格納するディレクトリ
+  ├ /backup                          … バックアップしたSQLファイルを格納するディレクトリ
   └ /data                            … CSVをインポートするためのディレクトリ
 
 ## Requirement
@@ -32,6 +33,11 @@ DBからバックアップを取得して、マスタをリリースするSQLを
    - [six](https://pypi.org/project/six/)
    - [cx_Oracle](https://pypi.org/project/cx-Oracle/)
    - [python-dateutil](https://pypi.org/project/python-dateutil/)
+   
+・入力するCSVの制約
+   - ヘッダーなし
+   - 囲い文字無し
+   - ファイル名はテーブル名
 
 ## Usage
 1 adminフォルダ上で、エクスプローラーで開きます。
@@ -42,3 +48,6 @@ DBからバックアップを取得して、マスタをリリースするSQLを
 
 ## Author
 Okimura(okimurak0901@gmail.com)
+
+## Sample
+sample_table_sqlフォルダにテーブルの作成SQLと、入力データ例を配置しておきます。

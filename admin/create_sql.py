@@ -149,4 +149,4 @@ def create_all_delete(table_name):
     str : str
         表をすべて削除するDELETE文
     """
-    return "DELETE from {arg}".format(arg=table_name)
+    return "DELETE from {arg}\n".format(arg=table_name)
