@@ -6,17 +6,18 @@ DBからバックアップを取得して、マスタを上書き更新するSQL
 
 ## Description
 ・フォルダ構成
- admin
-  ├ create_import_for_master.py      … マスタをリリースするためのSQLを発行するスクリプト、DBからのバックアップも取得する
-  ├ common_util.py                   … 共通的なユーティリティモジュール
-  ├ create_sql.py                    … SQLを生成するモジュール
-  ├ create_csv.py                    … CSVを生成するモジュール
-  ├ db_controller.py                 … DB接続するモジュール
-  ├ README.md                        … 本ドキュメント
-  ├ setting.ini                      … DB接続設定ファイル
-  ├ /output                          … 出力したSQLファイルを格納するディレクトリ
-  ├ /backup                          … バックアップしたSQLファイルを格納するディレクトリ
-  └ /data                            … CSVをインポートするためのディレクトリ
+ - admin
+	  ├ create_import_for_master.py      … マスタをリリースするためのSQLを発行するスクリプト、DBからのバックアップも取得する
+	  ├ common_util.py                   … 共通的なユーティリティモジュール
+	  ├ create_sql.py                    … SQLを生成するモジュール
+	  ├ create_csv.py                    … CSVを生成するモジュール
+	  ├ db_controller.py                 … DB接続するモジュール
+	  ├ setting.ini                      … DB接続設定ファイル
+	  ├ /output                          … 出力したSQLファイルを格納するディレクトリ
+	  ├ /backup                          … バックアップしたSQLファイルを格納するディレクトリ
+	  └ /data                            … CSVをインポートするためのディレクトリ
+ - sample_table_sql                       … 動作確認用SQL格納ディレクトリ
+ - README.md                              … 本ドキュメント
 
 ## Requirement
 ・動作環境
