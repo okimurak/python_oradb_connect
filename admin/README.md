@@ -1,0 +1,44 @@
+OracleDBデータリリースツール
+====
+## Overview
+OracleDBにリリースするためのSQLを生成するツール
+DBからバックアップを取得して、マスタをリリースするSQLを作成します。
+
+## Description
+・フォルダ構成
+ admin
+  ├ create_import_for_master.py      … マスタをリリースするためのSQLを発行するスクリプト、DBからのバックアップも取得する
+  ├ common_util.py                   … 共通的なユーティリティモジュール
+  ├ create_sql.py                    … SQLを生成するモジュール
+  ├ create_csv.py                    … CSVを生成するモジュール
+  ├ db_controller.py                 … DB接続するモジュール
+  ├ README.md                        … 本ドキュメント
+  ├ setting.ini                      … DB接続設定ファイル
+  ├ /output                          … 出力したSQLファイルを格納するディレクトリ
+  └ /data                            … CSVをインポートするためのディレクトリ
+
+## Requirement
+・動作環境
+   - Windows10 Pro（他OSは未検証）
+   - Python v3.6
+   - Oracle DB 12.2c（他Verは未検証）
+   - Oracle Client(Oracle Database 12.2c対応)
+   - Microsoft Visual C++ Redistributable for Visual Studio 2017
+
+・必要なPythonプラグイン
+   - [Pandas](https://pypi.org/project/pandas/)
+   - [numpy](https://pypi.org/project/numpy/)
+   - [pytz](https://pypi.org/project/pytz/)
+   - [six](https://pypi.org/project/six/)
+   - [cx_Oracle](https://pypi.org/project/cx-Oracle/)
+   - [python-dateutil](https://pypi.org/project/python-dateutil/)
+
+## Usage
+1 adminフォルダ上で、エクスプローラーで開きます。
+
+2 dataフォルダに、リリースするためのCSVファイルを配置します。
+
+3 「create_import_for_master.py」をダブルクリックします。
+
+## Author
+Okimura(okimurak0901@gmail.com)
